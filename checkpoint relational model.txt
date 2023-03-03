@@ -1,0 +1,35 @@
+Entités :
+
+Employé (id_employe, nom, prenom, date_embauche, poste, salaire)
+Hôtel (id_hotel, nom, ville, pays, nombre_chambres)
+Chambre (id_chambre, numero, etage, type, categorie, prix_nuit)
+Catégorie (id_categorie, nom_categorie, description)
+Type (id_type, nom_type, description)
+Relations :
+
+Travailler (id_employe, id_hotel) : indique l'hôtel où travaille chaque employé
+Occuper (id_chambre, id_client, date_arrivee, date_depart) : indique la période d'occupation de chaque chambre par un client
+Appartenir (id_chambre, id_hotel) : indique l'hôtel auquel appartient chaque chambre
+Appartenir_Categorie (id_chambre, id_categorie) : indique la catégorie de chaque chambre
+Appartenir_Type (id_chambre, id_type) : indique le type de chaque chambre
+Explications :
+
+L'entité Employé contient les informations de chaque employé de l'hôtel, telles que son nom, son poste et son salaire.
+
+L'entité Hôtel contient les informations de chaque hôtel, telles que son nom, sa ville et le nombre de chambres qu'il possède.
+
+L'entité Chambre contient les informations de chaque chambre, telles que son numéro, son étage, son type, sa catégorie et son prix par nuitée.
+
+L'entité Catégorie contient les informations de chaque catégorie de chambre, telles que son nom et une description.
+
+L'entité Type contient les informations de chaque type de chambre, telles que son nom et une description.
+
+La relation Travailler lie chaque employé à l'hôtel où il travaille, en utilisant leurs identifiants respectifs.
+
+La relation Occuper lie chaque chambre à un client et à la période d'occupation de cette chambre, en utilisant leurs identifiants respectifs et les dates d'arrivée et de départ du client.
+
+La relation Appartenir lie chaque chambre à l'hôtel où elle se trouve, en utilisant leurs identifiants respectifs.
+
+La relation Appartenir_Categorie lie chaque chambre à sa catégorie, en utilisant leurs identifiants respectifs.
+
+La relation Appartenir_Type lie chaque chambre à son type, en utilisant leurs identifiants respectifs.
